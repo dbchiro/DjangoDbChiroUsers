@@ -37,7 +37,7 @@ LOGGING = {
         },
     },
     "loggers": {
-        "sinp_organisms": {
+        "roles": {
             "handlers": ["console"],
             "level": "DEBUG",
             "propagate": False,
@@ -60,9 +60,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",  # required for serving swagger ui's css/js files
+    "djoser",
     "drf_yasg",
-    "sinp_nomenclatures",
-    "sinp_organisms",
     "roles",
 ]
 
