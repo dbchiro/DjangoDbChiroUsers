@@ -9,5 +9,7 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     }
-  }
+  },
+  "esbonio.server.enabled": true,
+  "cSpell.words": ["s"]
 }

@@ -52,6 +52,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "roles",
     "django.contrib.admin",
     "django.contrib.gis",
     "django.contrib.auth",
@@ -62,7 +63,6 @@ INSTALLED_APPS = [
     "rest_framework",  # required for serving swagger ui's css/js files
     "djoser",
     "drf_yasg",
-    "roles",
 ]
 
 MIDDLEWARE = [
