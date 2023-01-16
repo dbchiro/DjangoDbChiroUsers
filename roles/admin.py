@@ -3,24 +3,30 @@ from django.contrib.gis import admin
 
 from .models import Role
 
-admin.site.register(Role, UserAdmin)
-# Register your models here.
+
+class CustomUserAdmin(UserAdmin):
+    list_display = (
+        ("id",)
+        + UserAdmin.list_display
+        + (
+            "is_active",
+            "last_login",
+        )
+    )
+    search_fields = (
+        "username",
+        "first_name",
+        "last_name",
+        "email",
+    )
+    ordering = (
+        "username",
+        "first_name",
+        "last_name",
+        "last_login",
+        "is_active",
+        "is_superuser",
+    )
 
 
-# class GeoUserAdmin(LeafletGeoAdmin):
-#     list_display = [
-#         "id",
-#         "username",
-#         "email",
-#         "first_name",
-#         "last_name",
-#         "is_superuser",
-#         "is_staff",
-#         "is_active",
-#         "last_login",
-#     ]
-#     search_fields = ["username", "email", "first_name", "last_name"]
-#     list_filter = ("is_active", "is_staff", "is_superuser")
-
-
-# admin.site.register(Profile, GeoUserAdmin)
+admin.site.register(Role, CustomUserAdmin)

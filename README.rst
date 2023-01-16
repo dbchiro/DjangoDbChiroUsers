@@ -14,7 +14,7 @@ Quick start
 
 .. code-block:: bash
 
-    $ pip install -U app-name
+    $ pip install -U dj-dbchiro-roles
 
 
 
@@ -27,8 +27,7 @@ Quick start
         'django.contrib.auth',
         (...),
         'rest_framework',
-        'sinp_nomenclatures',
-        'sinp_organisms',
+        'roles',
         (...),
     )
 
@@ -45,9 +44,9 @@ Quick start
         (...),
     ]
 
-1. Run ``python manage.py migrate`` to create the polls models.
+4. Run ``python manage.py migrate`` to create the polls models.
 
-2. Start the development server and visit http://127.0.0.1:8000/admin/
-   to create an organism (you'll need the Admin app enabled).
+5. Start the development server and visit http://127.0.0.1:8000/admin/
+   to create a role (you'll need the Admin app enabled).
 
-3. Visit http://127.0.0.1:8000/api/v1/... to view organisms API.
+6. Visit http://127.0.0.1:8000/api/v1/... to view roles API.

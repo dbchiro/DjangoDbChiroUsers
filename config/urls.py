@@ -49,7 +49,7 @@ urlpatterns = [
         schema_view.with_ui("redoc", cache_timeout=0),
         name="schema-redoc",
     ),
+    path("auth/", include("djoser.urls")),
     path("api-auth/", include("rest_framework.urls")),
-    path("api/v1/", include("sinp_nomenclatures.urls")),
-    path("api/v1/", include("sinp_organisms.urls")),
+    path("api/v1/", include("roles.urls")),
 ]
